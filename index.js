@@ -24,7 +24,8 @@ const handleCategory = async () => {
 
     div.innerHTML = `
 
-        <a class="tab">${category.category_name}</a>
+        <a onclick="handelLoadNews ('${category
+            .category_id}') " class="tab">${category.category_name}</a>
 
         `;
 
@@ -35,6 +36,10 @@ const handleCategory = async () => {
 
 
 console.log(data.data.news_category);
+}
+
+const handelLoadNews = (categoryId) =>{
+    console.log(categoryId);
 }
 
 
